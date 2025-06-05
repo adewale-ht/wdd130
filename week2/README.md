@@ -1,2 +1,0 @@
-#  wdd130 folder
-ASSIGNMENT LOCATION
