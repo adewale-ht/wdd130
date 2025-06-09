@@ -1,0 +1,93 @@
+/* Google Fonts */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #023e8a;
+  --text-color: #03045e;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: white;
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.float-img {
+  float: right;
+  width: 150px;
+  margin-left: 1rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+
+section h2 {
+  color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer img {
+  width: 30px;
+  margin: 0 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+}
