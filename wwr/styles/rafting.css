@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
     --primary-color: #0D0E24; /* Dark base color */
@@ -137,11 +135,7 @@ footer p {
     font-size: 50px;
 }
 
-@keyframes bounce {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-30px); }
-    100% { transform: translateY(0); }
-}
+
 
 /* ---form styling--- */
 .newsletter {
@@ -241,30 +235,6 @@ footer p {
 .grid-item h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-}
-
-@media screen and (max-width: 600px) {
-    .homeHeading h1 {
-        font-size: 36px;
-        right: 5%;
-        top: 25px;
-    }
-
-    .newsletter {
-        top: 150px;
-        right: 5px;
-        width: 400px;
-    }
-
-    .homeHeading {
-        height: 410px;
-    }
-
-    .homeHeading img {
-        height: 400px;
-        width: 100%;
-    }
-
 }
 
 
@@ -378,37 +348,7 @@ figcaption {
 }
 
 /* Media query for smaller screens */
-@media screen and (max-width: 600px) {
-    .fig-images {
-      display: block;
-      text-align: center;
-      height: auto;
-    }
-  
-    .fig-images img {
-      width: 80%;
-      margin: 10px auto;
-      display: block;
-    }
 
-    figcaption {
-        width: 80%;
-        margin: 0 auto;
-    }
-
-    .section1 {
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .section1 img {
-        width: 100%;
-      }
-
-      .hero p {
-        font-size: 1.5vw;
-      }
-  }
 
 /* ******************Trips Page styling starts here******************** */
 .tripsPage {
@@ -511,42 +451,7 @@ article .flexArticle {
 }
 
 /* Media query for smaller screens (e.g., mobile) */
-@media screen and (max-width: 600px) {
-    .callToAction {
-        transform: translate(-8px, -1200px);
-        top: auto;
-        text-align: center;
-        padding: 20px;
-    }
 
-    .tripsDetail article {
-        height: 130px;
-    }
-
-    .tripsDetail {
-        display: flex;
-        flex-direction: column;
-        top: 500px;
-    }
-
-    .tripsDetail h4 {
-        font-size: 2.5vw;
-    }
-    
-    .tripsDetail p {
-        font-size: 2vw;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .tripsDetail h4 {
-        font-size: 2vh;
-    }
-    
-    .tripsDetail p {
-        font-size: 1.5vh;
-    }
-}
     
 /* ******************Contact Us Page styling starts here******************** */
 
@@ -665,24 +570,6 @@ iframe {
     justify-self: center;
 }
 
-@media screen and (max-width: 768px) {
-    .employee-profiles div {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .employee-profiles h5:first-of-type {
-        grid-row: 1;
-    }
-
-    .employee-profiles h5:nth-of-type(2) {
-        grid-row: 3;
-    }
-
-    .employee-profiles h5:last-of-type {
-        grid-row: 5;
-    }
-}
 
 /*Styling Forms Area*/
 /* fieldset and Legend Styling */
@@ -771,21 +658,3 @@ input[type="submit"]:hover {
     border: 2px solid #da0416;
 }
 
-@media screen and (min-width: 600px) {
-    fieldset {
-        width: 40%;
-        min-width: 320px;
-        margin: auto;
-    }
-    
-    .radios label {
-        display: inline-block;
-        padding-top: .5em;
-        margin-top: 0;
-        margin-right: .5em;
-    }
-
-    /* .name-email label {
-        margin-left: 0;
-    } */
-}
