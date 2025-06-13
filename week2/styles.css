@@ -1,10 +1,15 @@
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Main Content Styling */
+main {
+  padding: 20px;
+  text-align: center;
+}
 
 main img {
   width: 100%;
@@ -13,6 +18,7 @@ main img {
   margin-top: 20px;
 }
 
+/* Aside Styling */
 aside {
   width: 250px;
   margin: 20px;
@@ -41,29 +47,11 @@ aside p {
   padding: 0;
 }
 
+/* Footer Styling */
 footer {
   clear: both;
   text-align: center;
   margin-top: 20px;
   border-top: 1px solid #333;
   padding-top: 10px;
-}
-nav {
-  background: #eee;
-  padding: 10px;
-  text-align: center;
-}
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-}
-h1 {
-  font-family: 'Montserrat', serif;
-  font-size: 2em;
-  text-align: center;
-}
-main {
-  max-width: 800px;
-  margin: 0 auto;
 }
