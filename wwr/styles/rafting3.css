@@ -3,14 +3,18 @@
     --secondary-color: #A7A9B9;
     --accent1-color: #373E7C;
     --accent2-color: #1E203F;
+
     --heading-font: 'Montserrat', sans-serif;
     --paragraph-font: 'Roboto Serif', serif;
+
     --nav-background-color: #373E7C;
     --nav-hover-link-color: #fff;
     --nav-hover-background-color: #1E203F;
 }
 
-* { margin: 0 auto; }
+* {
+    margin: 0 auto;
+}
 
 body {
     font-family: var(--paragraph-font);
@@ -18,18 +22,16 @@ body {
     padding: 10px;
 }
 
-header, footer {
-    background-color: var(--primary-color);
-}
-
+/* header styling begins here */
 header {
     display: grid;
     grid-template-columns: 1fr 2fr 3fr;
     padding: 20px;
     margin-bottom: 10px;
+    background-color: var(--primary-color);
 }
 
-header a, nav a {
+header a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -53,34 +55,45 @@ header img {
     cursor: pointer;
 }
 
-nav a:hover, .wireframe:hover, .viewTrips button:hover, .homeForm button:hover, button[type="button"]:hover {
-    color: #fff;
-    background-color: #da0416;
-    font-weight: 700;
+nav a:hover {
+    color: var(--secondary-color);
+    background-color: rgb(255, 255, 255);
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* the hero image and article begins here */
+h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
     text-align: center;
     padding: 10px;
 }
 
+/* the footer styling begins here */
+
 footer {
     display: grid;
     grid-template-columns: 80% 1fr;
     color: #fff;
+    background-color: var(--primary-color);
     align-items: center;
     margin: 10px auto;
     padding: 20px;
-}
+} 
 
-footer a, .wireframe {
+footer a {
     text-decoration: none;
     color: #fff;
 }
 
 footer a:hover {
     color: var(--secondary-color);
+}
+
+.wireframe {
+    color: rgb(255, 136, 57);
+}
+
+.wireframe:hover {
+    color: #fff;
 }
 
 footer nav img {
@@ -98,41 +111,54 @@ footer nav img {
 
 footer p {
     justify-self: right;
+    /* margin-left: 20em; */
 }
 
+/* ****************Home Page Styling starts here**************** */
 .homeHeading {
     position: relative;
     height: auto;
     margin-bottom: 5px;
 }
 
-.homeHeading img { width: 1200px; }
+.homeHeading img {
+    width: 1200px;
+}
 
 .homeHeading h1 {
     position: absolute;
     animation: bounce 1s infinite;
     top: 150px;
     right: 150px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     color: #ddd;
     font-size: 50px;
 }
 
-.newsletter, .homeForm {
-    background-color: #1c1c1c;
-}
-
+/* ---form styling--- */
 .newsletter {
+    /* margin: 0 auto; */
     position: absolute;
     top: 350px;
     right: 50px;
+    background-color: #1c1c1c;
     padding-bottom: 30px;
     border-radius: 10px;
     border: 2px solid white;
 }
 
-.newsletter h3, .form-group label {
+.newsletter h3 {
     color: aqua;
+}
+
+.homeForm {
+    background-color: #1c1c1c;
+}
+
+.homeForm button:hover {
+    color: #fff;
+    background-color: #da0416;
+    font-weight: 700;
 }
 
 .form-group {
@@ -142,8 +168,12 @@ footer p {
     padding-right: 50px;
 }
 
-.form-group input[type="text"], .form-group input[type="email"] {
-    max-width: 200px;
+.form-group input[type="text"], input[type="email"] {
+    max-width: 200px
+}
+
+.form-group label {
+    color: aqua;
 }
 
 .form-group input {
@@ -153,7 +183,9 @@ footer p {
     margin-top: 10px;
 }
 
-.homeForm button { margin-left: 50px; }
+.homeForm button {
+    margin-left: 50px;
+}
 
 .viewTrips {
     background-color: var(--secondary-color);
@@ -166,9 +198,17 @@ footer p {
     text-decoration: none;
     color: #000;
     font-weight: 700;
+
 }
 
-.viewTrips button { font-size: 1.25em; }
+.viewTrips button {
+    font-size: 1.25em;
+}
+
+.viewTrips button:hover {
+    background-color: #000;
+    color: white;
+}
 
 .tripsDesc {
     display: grid;
@@ -190,20 +230,26 @@ footer p {
     margin-bottom: 10px;
 }
 
-.grid-item h3 { font-size: 1.2em; margin-bottom: 10px; }
-
-.hero {
-    height: auto;
-    position: relative;
+.grid-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
 }
 
+
+/* **********************About Us Page starts here********************** */
+
 .hero h1 {
-    background-color: rgba(13,14,36,0.3);
+    background-color: rgba(13, 14, 36, 0.3);
     position: absolute;
     top: 100px;
     left: 0;
     right: 0;
     padding: 10px;
+}
+
+.hero {
+    height: auto;
+    position: relative;
 }
 
 .hero img {
@@ -222,12 +268,12 @@ footer p {
 }
 
 .hero article {
-    position: absolute;
+    position: absolute; /*positioned absolutely*/
     top: 200px;
     left: 0;
     right: 0;
     margin: 10px auto;
-    background-color: rgba(167,169,185,0.3);
+    background-color: rgba(167, 169, 185, 0.3);
     max-width: 80%;
     padding: 15px;
     color: #000;
@@ -238,19 +284,24 @@ footer p {
     margin: 10px auto;
     background-color: var(--secondary-color);
     color: #fff;
+    /* min-width: 600px; */
 }
 
-.history-section h2 { padding-bottom: 30px; }
+.history-section h2 {
+    padding-bottom: 30px;
+}
 
 .section1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "text1 image text2";
     gap: 10px;
-    padding: 10px 20px 40px;
+    padding: 10px 20px 40px ;
 }
 
-.section1 p { text-align: start; }
+.section1 p {
+    text-align: start;
+}
 
 .section1 img {
     grid-area: image;
@@ -258,8 +309,15 @@ footer p {
     height: auto;
 }
 
-.section1 p:first-child { grid-area: text1; }
-.section1 p:last-child { grid-area: text2; }
+.section1 p:first-child {
+    grid-area: text1;
+}
+
+.section1 p:last-child {
+    grid-area: text2;
+}
+
+/* the adventure with fig images styling begins here */
 
 .adventure-section {
     background-color: var(--secondary-color);
@@ -275,11 +333,6 @@ footer p {
     height: 250px;
 }
 
-.fig-images img {
-    width: 200px;
-    border: 2px solid;
-}
-
 figcaption {
     text-align: center;
     padding: 5px;
@@ -287,6 +340,15 @@ figcaption {
     color: #fff;
 }
 
+.fig-images img {
+    width: 200px;
+    border: 2px solid;
+}
+
+/* Media query for smaller screens */
+
+
+/* ******************Trips Page styling starts here******************** */
 .tripsPage {
     position: relative;
 }
@@ -300,10 +362,13 @@ figcaption {
 .callToAction {
     position: absolute;
     top: 200px;
+    /* margin-left: 100px; */
     transform: translate(45%, -50%);
 }
 
-.callToAction p { font-weight: 700; }
+.callToAction p {
+    font-weight: 700;
+}
 
 .callToAction a {
     text-decoration: none;
@@ -313,9 +378,13 @@ figcaption {
     padding-right: 5px;
 }
 
-.callToAction a:hover { color: gold; }
+.callToAction a:hover {
+    color: gold;
 
-.tripsPage h1, .tripsPage p {
+}
+
+.tripsPage h1,
+.tripsPage p {
     color: #fff;
     text-transform: uppercase;
     max-width: 40rem;
@@ -346,7 +415,7 @@ figcaption {
 }
 
 .tripsDetail h4 {
-    text-transform: uppercase;
+    text-transform: uppercase ;
     text-align: start;
 }
 
@@ -363,7 +432,8 @@ article .flexArticle {
     background-color: var(--primary-color);
 }
 
-.flexArticle h4:first-of-type, .flexArticle p:nth-of-type(2) {
+.flexArticle h4:first-of-type,
+.flexArticle p:nth-of-type(2) {
     text-align: start;
     padding-left: 30px;
     text-transform: uppercase;
@@ -374,14 +444,18 @@ article .flexArticle {
     transform: translate(300px, 220px);
 }
 
-.triangle-button:hover { border-color: #fff #fff; }
-
-.contact-support, .contact-support form {
-    background-color: #fce3e3;
+.triangle-button:hover {
+    border-color: #fff #fff;
 }
+
+/* Media query for smaller screens (e.g., mobile) */
+
+    
+/* ******************Contact Us Page styling starts here******************** */
 
 .contact-support {
     margin: 10px auto;
+    background-color: #fce3e3;
 }
 
 .contact-support article {
@@ -392,7 +466,7 @@ article .flexArticle {
     color: #fff;
 }
 
-.contact-support h4, .contact-support p, .contact-support form {
+.contact-support h4, p, form {
     text-align: center;
 }
 
@@ -404,7 +478,20 @@ article .flexArticle {
     background-color: var(--secondary-color);
 }
 
-button[type="button"] { margin: 10px; }
+.contact-support form {
+    background-color: var(--secondary-color);
+}
+
+button[type="button"] {
+    /* background-color: #da0416; */
+    margin: 10px;
+
+}
+
+button[type="button"]:hover {
+    background-color: #000;
+    color: #fff;
+}
 
 .fone {
     display: flex;
@@ -412,8 +499,10 @@ button[type="button"] { margin: 10px; }
     max-width: 250px;
 }
 
-.fone img { margin-left: 60px; }
-
+.fone img {
+    margin-left: 60px;
+}
+/*section elements styling*/
 .company-info {
     display: flex;
     flex-flow: row wrap;
@@ -428,10 +517,17 @@ button[type="button"] { margin: 10px; }
     row-gap: 20px;
 }
 
-.company-info div, h2, .company-info h4 { color: white; }
+.company-info div, 
+h2, 
+.company-info h4 {
+    color: white;
+}
 
-.company-info p { padding-left: 10px; }
+.company-info p {
+    padding-left: 10px;
+}
 
+/* employee profile styling */
 .employee-profiles {
     margin: 10px auto;
     background-color: var(--secondary-color);
@@ -439,7 +535,7 @@ button[type="button"] { margin: 10px; }
 
 .employee-profiles h5 {
     text-align: center;
-    border: 2px solid;
+    border: 2px solid ;
     border-width: 0 100px;
     border-color: var(--secondary-color);
     color: #fff;
@@ -456,10 +552,16 @@ button[type="button"] { margin: 10px; }
 .employee-profiles div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
 }
 
-.employee-profiles div img { justify-self: center; }
+.employee-profiles div img {
+    justify-self: center;
+}
 
+
+/*Styling Forms Area*/
+/* fieldset and Legend Styling */
 form {
     background-color: #525151;
     padding: 10px;
@@ -488,6 +590,7 @@ label {
 }
 
 .name-email label {
+
     text-align: start;
     margin-left: 5em;
 }
@@ -498,7 +601,9 @@ label {
     max-width: 300px;
 }
 
-input[type="email"], input[type="text"] { width: 25em; }
+input[type="email"], input[type="text"] {
+    width: 25em;
+}
 
 textarea {
     min-height: 5em;
@@ -508,16 +613,25 @@ textarea {
     margin: 1em 0;
 }
 
-fieldset h4 { margin-top: 1em; }
+fieldset h4 {
+    margin-top: 1em;
+}
 
-.radios { margin-bottom: 1em; }
+/*Radio buttons and Check boxes*/
+.radios {
+    margin-bottom: 1em;
+
+}
 
 input[type="checkbox"] + label, input[type="radio"] + label {
     display: inline-block;
 }
 
-input[type="radio"]:first-of-type { margin-left: 0; }
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
 
+/*styling the submit button*/
 input[type="submit"] {
     padding: .5em 1em;
     border-radius: .25em;
