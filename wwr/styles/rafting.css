@@ -18,7 +18,7 @@ body {
     padding: 10px;
 }
 
-header, footer {
+header, footer, .company-info {
     background-color: var(--primary-color);
 }
 
@@ -29,7 +29,7 @@ header {
     margin-bottom: 10px;
 }
 
-header nav, .sociallinks, .fig-images {
+header nav, .sociallinks, .fig-images, .contact-support article {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -37,7 +37,7 @@ header nav, .sociallinks, .fig-images {
     justify-content: right;
 }
 
-header a, nav a, .viewTrips a {
+header a, nav a, .viewTrips a, .callToAction a {
     display: block;
     text-decoration: none;
     text-align: center;
@@ -49,16 +49,17 @@ header a, nav a, .viewTrips a {
     margin: 0 10px;
 }
 
-nav a:hover, .wireframe:hover, .viewTrips button:hover, .homeForm button:hover, button[type="button"]:hover {
+nav a:hover, .wireframe:hover, .viewTrips button:hover, .homeForm button:hover, button[type="button"]:hover, .callToAction a:hover {
     color: #fff;
     background-color: #da0416;
     font-weight: 700;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .company-info div, .company-info h4 {
     font-family: var(--heading-font);
     text-align: center;
     padding: 10px;
+    color: white;
 }
 
 footer {
@@ -77,8 +78,7 @@ footer a, .wireframe {
 
 footer a:hover { color: var(--secondary-color); }
 
-/* Removed: footer nav img, .fig-images img (combine below) */
-footer nav img, .fig-images img, .employee-profiles div img {
+footer nav img, .fig-images img, .employee-profiles div img, .fone img {
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -116,12 +116,14 @@ footer p { justify-self: right; }
     margin-bottom: 10px;
     padding-right: 50px;
 }
-.form-group input {
+.form-group input, .name-email input {
     max-width: 200px;
     border-radius: 5px;
     color: red;
     font-weight: 700;
     margin-top: 10px;
+    padding: 5px;
+    border: 1px solid #000;
 }
 
 .viewTrips {
@@ -143,7 +145,6 @@ footer p { justify-self: right; }
 }
 .grid-item h3 { font-size: 1.2em; margin-bottom: 10px; }
 
-/* Combine hero, history-section, adventure-section, employee-profiles */
 .hero, .history-section, .adventure-section, .employee-profiles {
     background-color: var(--secondary-color);
     padding: 20px 0;
@@ -205,13 +206,10 @@ figcaption {
     max-width: 40rem;
 }
 .callToAction a {
-    text-decoration: none;
-    color: aqua;
     font-weight: 700;
     font-style: italic;
     padding-right: 5px;
 }
-.callToAction a:hover { color: gold; }
 
 .tripsDetail {
     position: absolute;
@@ -262,13 +260,6 @@ figcaption {
 }
 .triangle-button:hover { border-color: #fff #fff; }
 
-.contact-support article {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding-bottom: 1em;
-    color: #fff;
-}
 .contact-support h4, .contact-support p, .contact-support form {
     text-align: center;
 }
@@ -287,21 +278,12 @@ button[type="button"] { margin: 10px; }
     font-style: italic;
     max-width: 250px;
 }
-.fone img { margin-left: 60px; }
 
-.company-info {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: var(--primary-color);
-}
 .company-info div {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
-.company-info div, h2, .company-info h4 { color: white; }
 .company-info p { padding-left: 10px; }
 
 .employee-profiles h5 {
@@ -322,7 +304,6 @@ button[type="button"] { margin: 10px; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-/* Removed: .employee-profiles div img (combined above) */
 
 form, fieldset {
     background-color: #525151;
@@ -345,11 +326,6 @@ label {
     margin-top: 10px;
 }
 .name-email label { text-align: start; margin-left: 5em; }
-.name-email input {
-    padding: 5px;
-    border: 1px solid #000;
-    max-width: 300px;
-}
 input[type="email"], input[type="text"] { width: 25em; }
 textarea {
     min-height: 5em;
