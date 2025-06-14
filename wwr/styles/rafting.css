@@ -77,7 +77,8 @@ footer a, .wireframe {
 
 footer a:hover { color: var(--secondary-color); }
 
-footer nav img, .fig-images img {
+/* Removed: footer nav img, .fig-images img (combine below) */
+footer nav img, .fig-images img, .employee-profiles div img {
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -142,6 +143,7 @@ footer p { justify-self: right; }
 }
 .grid-item h3 { font-size: 1.2em; margin-bottom: 10px; }
 
+/* Combine hero, history-section, adventure-section, employee-profiles */
 .hero, .history-section, .adventure-section, .employee-profiles {
     background-color: var(--secondary-color);
     padding: 20px 0;
@@ -320,7 +322,7 @@ button[type="button"] { margin: 10px; }
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-.employee-profiles div img { justify-self: center; }
+/* Removed: .employee-profiles div img (combined above) */
 
 form, fieldset {
     background-color: #525151;
