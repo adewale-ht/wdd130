@@ -1,15 +1,15 @@
 :root {
-    --primary-color: #0D0E24; /* Dark base color */
-    --secondary-color: #A7A9B9; /* Light secondary color */
-    --accent1-color: #373E7C; /* Accent color for highlights */
-    --accent2-color: #1E203F; /* Secondary accent color */
+    --primary-color: #0D0E24;
+    --secondary-color: #A7A9B9;
+    --accent1-color: #373E7C;
+    --accent2-color: #1E203F;
 
     --heading-font: 'Montserrat', sans-serif;
-    --paragraph-font: 'Open Sans', sans-serif;
-    
-    --nav-background-color: #373E7C; /* Nav background adjusted for consistency */
-    --nav-hover-link-color: #fff; 
-    --nav-hover-background-color: #1E203F; /* Slightly darker shade for nav hover */
+    --paragraph-font: 'Roboto Serif', serif;
+
+    --nav-background-color: #373E7C;
+    --nav-hover-link-color: #fff;
+    --nav-hover-background-color: #1E203F;
 }
 
 * {
