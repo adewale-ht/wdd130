@@ -15,6 +15,8 @@
 * { margin: 0 auto; }
 
 body {
+    background: #0D0E24;
+    color: #fff;
     font-family: var(--paragraph-font);
     max-width: 1200px;
     padding: 10px;
@@ -31,7 +33,7 @@ header {
     margin-bottom: 10px;
 }
 
-header nav, .sociallinks, .fig-images, .contact-support article {
+header nav, .sociallinks, .fig-images, .contact-support article, .form-group, .company-info div {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -39,25 +41,30 @@ header nav, .sociallinks, .fig-images, .contact-support article {
     justify-content: right;
 }
 
-header a, nav a, .viewTrips a, .callToAction a {
-    display: block;
+header a, nav a, .viewTrips a, .callToAction a, .button {
+    display: inline-block;
     text-decoration: none;
     text-align: center;
-    padding: 5px;
+    padding: 0.75em 2em;
     border: 2px solid var(--secondary-color);
     color: #fff;
     background-color: var(--primary-color);
-    width: 120px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-family: var(--heading-font);
+    font-weight: bold;
+    transition: background 0.2s;
     margin: 0 10px;
+    cursor: pointer;
 }
 
-nav a:hover, .wireframe:hover, .viewTrips button:hover, .homeForm button:hover, button[type="button"]:hover, .callToAction a:hover {
+nav a:hover, .wireframe:hover, .viewTrips button:hover, .homeForm button:hover, button[type="button"]:hover, .callToAction a:hover, .button:hover {
     color: #fff;
-    background-color: #da0416;
+    background-color: var(--accent2-color, #1E203F);
     font-weight: 700;
 }
 
-h1, h2, h3, h4, h5, h6, .company-info div, .company-info h4 {
+h1, h2, h3, h4, h5, h6, .company-info h4 {
     font-family: var(--heading-font);
     text-align: center;
     padding: 10px;
@@ -112,12 +119,6 @@ footer p { justify-self: right; }
 
 .newsletter h3, .form-group label { color: aqua; }
 
-.form-group {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-    padding-right: 50px;
-}
 .form-group input, .name-email input {
     max-width: 200px;
     border-radius: 5px;
@@ -136,14 +137,16 @@ footer p { justify-self: right; }
 .viewTrips button { font-size: 1.25em; }
 
 .grid-item {
+    background: #fff;
+    color: #0D0E24;
     padding: 20px;
     text-align: center;
-    background-color: #fff;
+    border-radius: 8px;
 }
 .grid-item img {
     width: 100%;
-    height: 200px;
-    margin-bottom: 10px;
+    height: auto;
+    border-radius: 8px;
 }
 .grid-item h3 { font-size: 1.2em; margin-bottom: 10px; }
 
@@ -206,11 +209,6 @@ figcaption {
     color: #fff;
     text-transform: uppercase;
     max-width: 40rem;
-}
-.callToAction a {
-    font-weight: 700;
-    font-style: italic;
-    padding-right: 5px;
 }
 
 .tripsDetail {
@@ -281,11 +279,6 @@ button[type="button"] { margin: 10px; }
     max-width: 250px;
 }
 
-.company-info div {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
 .company-info p { padding-left: 10px; }
 
 .employee-profiles h5 {
@@ -352,4 +345,26 @@ input[type="submit"]:hover {
     color: var(--secondary-color);
     font-weight: 700;
     border: 2px solid #da0416;
+}
+
+.tripsDesc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    background: #fff;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 0.75em;
+    text-align: center;
+}
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
