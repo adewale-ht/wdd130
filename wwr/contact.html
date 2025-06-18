@@ -41,7 +41,7 @@
                     <h4>CONTACT CUSTOMER SUPPORT</h4>
                     <p>We are waiting to help you - so do not hesitate to reach out!</p>
                     <form>
-                        <button type="button">Contact Support</button>
+                        <a href="#contact-form" class="button">Contact Support</a>
                     </form>
                 </div>
             </article>
@@ -76,7 +76,7 @@
             </div>  
         </section>
 
-        <form action="#" method="get">
+        <form id="contact-form" action="#" method="get">
             <fieldset>
                 <legend>Send Us a Message</legend>
                 <p>Thank you for your interest in our Whitewater Rafting Company. <br>
@@ -96,9 +96,8 @@
                     <label for="resquestion">Reservation Question</label>
                     <input type="radio" name="options" id="websugg" value="websiteSuggestion">
                     <label for="websugg">Website Suggestion</label>
-                    <textarea id="enqmessage" cols="30" rows="10"
-                        placeholder="Enter details of your enquiry here"></textarea>
-                    <input type="checkbox" id="subscribe">
+                    <textarea id="enqmessage" name="enqmessage" cols="30" rows="10" placeholder="Enter details of your enquiry here"></textarea>
+                    <input type="checkbox" id="subscribe" name="subscribe">
                     <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                 </div>
                 <input type="submit" value="Submit Form">
